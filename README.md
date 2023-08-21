@@ -1,6 +1,6 @@
 # Reproduction of Prisma Accelerate warning ESM in Next.JS
 
-Here is the associated Github [discussion](https://github.com/prisma/prisma/issues/20743).
+Here is the associated Github [issue](https://github.com/prisma/prisma/issues/20743).
 
 ```bash
 - warn ./node_modules/@prisma/extension-accelerate/dist/esm/node-fetch.js
