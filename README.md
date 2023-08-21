@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Reproduction of Prisma Accelerate warning ESM in Next.JS
 
-## Getting Started
-
-First, run the development server:
+Here is the associated Github [discussion](https://github.com/prisma/prisma/issues/20743).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- warn ./node_modules/@prisma/extension-accelerate/dist/esm/node-fetch.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@prisma/extension-accelerate/dist/esm/node-fetch.js
+./node_modules/@prisma/extension-accelerate/dist/esm/index.js
+./lib/db.ts
+./app/api/route.ts
+./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Froute&page=%2Fapi%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Froute.ts&appDir=%2FUsers%2Fankur%2FWork%2Fmongo-accelerate%2Fnext-mongo-bug%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fankur%2FWork%2Fmongo-accelerate%2Fnext-mongo-bug&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=iad1&middlewareConfig=e30%3D!./app/api/route.ts?__next_edge_ssr_entry__
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
